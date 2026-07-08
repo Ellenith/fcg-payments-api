@@ -8,7 +8,7 @@
 // Simulação: 90% de aprovação para demonstração.
 // ============================================================
 
-using FCG.PaymentsAPI.Contratos;
+using FCG.Contratos;
 using MassTransit;
 
 namespace FCG.PaymentsAPI.Consumidores;
