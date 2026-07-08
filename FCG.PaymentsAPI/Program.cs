@@ -1,34 +1,42 @@
-var builder = WebApplication.CreateBuilder(args);
+// ============================================================
+// Program.cs — PaymentsAPI
+// Microsserviço de Pagamentos da FIAP Cloud Games
+// Sem endpoints HTTP — apenas consome e publica eventos
+// ============================================================
 
-// Add services to the container.
+using FCG.PaymentsAPI.Consumidores;
+using MassTransit;
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/payments-api-.txt", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)
+    .CreateLogger();
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
+
+builder.Services.AddMassTransit(x =>
+{
+    // Registra o consumidor do OrderPlacedEvent
+    x.AddConsumer<OrderPlacedConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(builder.Configuration["RabbitMQ:Host"], h =>
+        {
+            h.Username(builder.Configuration["RabbitMQ:Usuario"]!);
+            h.Password(builder.Configuration["RabbitMQ:Senha"]!);
+        });
+
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-});
+// Health check simples para o Kubernetes verificar se o serviço está vivo
+app.MapGet("/health", () => Results.Ok(new { Status = "Healthy", Service = "PaymentsAPI" }));
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
