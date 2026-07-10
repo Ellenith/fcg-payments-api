@@ -40,8 +40,8 @@ public class OrderPlacedConsumer : IConsumer<OrderPlacedEvent>
         await Task.Delay(500);
 
         // Simula aprovação — 90% de chance de aprovar
-        //var aprovado = new Random().Next(1, 11) <= 9;
-        var aprovado = false; // Para teste, sempre rejeita o pagamento
+        var aprovado = new Random().Next(1, 11) <= 9;
+        //var aprovado = false; // Para teste, sempre rejeita o pagamento
         var status   = aprovado ? "Approved" : "Rejected";
         var mensagem = aprovado
             ? $"Pagamento de R${evento.Preco:F2} aprovado para o jogo '{evento.TituloJogo}'."
