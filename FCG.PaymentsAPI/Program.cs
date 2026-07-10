@@ -30,7 +30,10 @@ builder.Services.AddMassTransit(x =>
             h.Password(builder.Configuration["RabbitMQ:Senha"]!);
         });
 
-        cfg.ConfigureEndpoints(context);
+        cfg.ReceiveEndpoint("payments-order-placed", e =>
+        {
+            e.ConfigureConsumer<OrderPlacedConsumer>(context);
+        });
     });
 });
 
