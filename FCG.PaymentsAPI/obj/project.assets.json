@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net9.0": {
       "MassTransit/8.3.6": {
@@ -1333,11 +1333,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 2\\FCG - Fase 02\\fcg-payments-api\\FCG.PaymentsAPI\\FCG.PaymentsAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 3\\FCG - Fase 03\\fcg-payments-api\\FCG.PaymentsAPI\\FCG.PaymentsAPI.csproj",
       "projectName": "FCG.PaymentsAPI",
-      "projectPath": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 2\\FCG - Fase 02\\fcg-payments-api\\FCG.PaymentsAPI\\FCG.PaymentsAPI.csproj",
+      "projectPath": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 3\\FCG - Fase 03\\fcg-payments-api\\FCG.PaymentsAPI\\FCG.PaymentsAPI.csproj",
       "packagesPath": "C:\\Users\\Ixtli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 2\\FCG - Fase 02\\fcg-payments-api\\FCG.PaymentsAPI\\obj\\",
+      "outputPath": "C:\\Users\\Ixtli\\OneDrive\\Documentos\\Cursos\\Pos-Graduacao FIAP\\Arquitetura e Desenvolvimento .NET\\Projeto - Etapa 3\\FCG - Fase 03\\fcg-payments-api\\FCG.PaymentsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1357,6 +1357,7 @@
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {}
         }
@@ -1371,10 +1372,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net9.0": {
+        "framework": "net9.0",
         "targetAlias": "net9.0",
         "dependencies": {
           "MassTransit.RabbitMQ": {
@@ -1401,6 +1403,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.20, 9.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[9.0.20, 9.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.20, 9.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[9.0.20, 9.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1409,7 +1429,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,1 +1,3 @@
-bin/\nobj/\nLogs/
+bin/
+\obj/
+\Logs/

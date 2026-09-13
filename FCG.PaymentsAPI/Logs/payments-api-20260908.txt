@@ -1,0 +1,16 @@
+2026-09-08 23:01:00.940 -03:00 [INF] Configured endpoint payments-order-placed, Consumer: FCG.PaymentsAPI.Consumidores.OrderPlacedConsumer
+2026-09-08 23:01:01.055 -03:00 [INF] Now listening on: http://localhost:5293
+2026-09-08 23:01:01.056 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 23:01:01.057 -03:00 [INF] Hosting environment: Development
+2026-09-08 23:01:01.058 -03:00 [INF] Content root path: C:\Users\Ixtli\OneDrive\Documentos\Cursos\Pos-Graduacao FIAP\Arquitetura e Desenvolvimento .NET\Projeto - Etapa 3\FCG - Fase 03\fcg-payments-api\FCG.PaymentsAPI
+2026-09-08 23:01:01.236 -03:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-09-08 23:11:49.160 -03:00 [INF] Application is shutting down...
+2026-09-08 23:11:49.207 -03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2026-09-08 23:33:27.063 -03:00 [INF] Configured endpoint payments-order-placed, Consumer: FCG.PaymentsAPI.Consumidores.OrderPlacedConsumer
+2026-09-08 23:33:27.184 -03:00 [INF] Now listening on: http://localhost:5293
+2026-09-08 23:33:27.185 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-08 23:33:27.186 -03:00 [INF] Hosting environment: Development
+2026-09-08 23:33:27.187 -03:00 [INF] Content root path: C:\Users\Ixtli\OneDrive\Documentos\Cursos\Pos-Graduacao FIAP\Arquitetura e Desenvolvimento .NET\Projeto - Etapa 3\FCG - Fase 03\fcg-payments-api\FCG.PaymentsAPI
+2026-09-08 23:33:27.316 -03:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-09-08 23:34:29.339 -03:00 [INF] Application is shutting down...
+2026-09-08 23:34:29.382 -03:00 [INF] Bus stopped: "rabbitmq://localhost/"
